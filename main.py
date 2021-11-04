@@ -18,7 +18,7 @@ else:
 # .lib files named as <opencv_libname><opencv_version>.lib (e.g. opencv_core454.lib)
 filename1 = "\\Libs_Release"
 opencvlib_list_path = opencv_lib_dir + filename1 + ".txt"
-f1= open(opencvlib_list_path,"w+")
+f1 = open(opencvlib_list_path,"w+")
 for filename in os.listdir(opencv_lib_dir):
      if fnmatch.fnmatch(filename, "*" + str(opencv_ver) + ".lib"):
         f1.write(filename + '\n')
@@ -27,7 +27,7 @@ f1.close()
 # d.lib files named as <opencv_><libname><opencv_version><d>.lib (e.g. opencv_core454d.lib)
 filename2 = "\\Libs_Debug"
 opencvlib_list_path = opencv_lib_dir + filename2 + ".txt"
-f2= open(opencvlib_list_path,"w+")
+f2 = open(opencvlib_list_path,"w+")
 for filename in os.listdir(opencv_lib_dir):
      if fnmatch.fnmatch(filename, "*" + str(opencv_ver) + 'd.lib'):
         f2.write(filename + '\n')
